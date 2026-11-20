@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="连珠 · 五子棋">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf5ea" />
+      <stop offset="1" stop-color="#e7d9c2" />
+    </linearGradient>
+    <radialGradient id="blackStone" cx="34%" cy="28%" r="82%">
+      <stop offset="0" stop-color="#5a544b" />
+      <stop offset="44%" stop-color="#201d18" />
+      <stop offset="100%" stop-color="#060504" />
+    </radialGradient>
+    <radialGradient id="redStone" cx="34%" cy="28%" r="82%">
+      <stop offset="0" stop-color="#e08a6f" />
+      <stop offset="46%" stop-color="#b4432c" />
+      <stop offset="100%" stop-color="#7d2818" />
+    </radialGradient>
+    <filter id="stoneShadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#22170b" flood-opacity="0.38" />
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#paper)" />
+  <rect width="512" height="512" filter="url(#grain)" opacity="0.055" />
+
+  <g stroke="#6b5941" stroke-width="2" opacity="0.24">
+    <path d="M128 128H384M128 192H384M128 256H384M128 320H384M128 384H384" />
+    <path d="M128 128V384M192 128V384M256 128V384M320 128V384M384 128V384" />
+  </g>
+
+  <g filter="url(#stoneShadow)">
+    <circle cx="128" cy="384" r="28" fill="url(#blackStone)" stroke="#ffffff" stroke-opacity="0.13" />
+    <circle cx="192" cy="320" r="28" fill="url(#blackStone)" stroke="#ffffff" stroke-opacity="0.13" />
+    <circle cx="256" cy="256" r="28" fill="url(#blackStone)" stroke="#ffffff" stroke-opacity="0.13" />
+    <circle cx="320" cy="192" r="28" fill="url(#blackStone)" stroke="#ffffff" stroke-opacity="0.13" />
+    <circle cx="384" cy="128" r="28" fill="url(#redStone)" stroke="#ffffff" stroke-opacity="0.2" />
+  </g>
+
+  <g fill="#ffffff" opacity="0.32">
+    <ellipse cx="119" cy="375" rx="8" ry="3.5" transform="rotate(-38 119 375)" />
+    <ellipse cx="183" cy="311" rx="8" ry="3.5" transform="rotate(-38 183 311)" />
+    <ellipse cx="247" cy="247" rx="8" ry="3.5" transform="rotate(-38 247 247)" />
+    <ellipse cx="311" cy="183" rx="8" ry="3.5" transform="rotate(-38 311 183)" />
+    <ellipse cx="375" cy="119" rx="8" ry="3.5" transform="rotate(-38 375 119)" />
+  </g>
+</svg>

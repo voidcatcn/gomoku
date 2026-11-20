@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="连珠 · 五子棋：可同屏双人对弈或挑战本地引擎。跨平台、可离线、棋谱不出本机。"
+    />
+    <meta name="theme-color" content="#f2ede3" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="连珠" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin />
+    <title>连珠 · 五子棋</title>
+    <script>
+      try {
+        if (localStorage.getItem("lianzhu:theme") === "dark") {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.colorScheme = "dark";
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute("content", "#12110f");
+        }
+      } catch (error) {
+        /* no-op */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

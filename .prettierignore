@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+screenshots/
+src-tauri/target/
+src-tauri/gen/
+.pnpm-store/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
